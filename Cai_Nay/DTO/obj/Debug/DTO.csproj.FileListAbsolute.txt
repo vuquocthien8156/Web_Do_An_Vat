@@ -1,0 +1,14 @@
+E:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\bin\Debug\DTO.dll
+E:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\bin\Debug\DTO.pdb
+E:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\obj\Debug\DTO.dll
+E:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\obj\Debug\DTO.pdb
+H:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\bin\Debug\DTO.dll
+H:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\bin\Debug\DTO.pdb
+H:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+H:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\obj\Debug\DTO.dll
+H:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\obj\Debug\DTO.pdb
+G:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\bin\Debug\DTO.dll
+G:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\bin\Debug\DTO.pdb
+G:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\obj\Debug\DTO.csprojResolveAssemblyReference.cache
+G:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\obj\Debug\DTO.dll
+G:\New folder\LT Web\Do an LTW\VuQuocThien_TranHaMyDuyen_NguyenHuynhAnhTuan\Cai_Nay\DTO\obj\Debug\DTO.pdb

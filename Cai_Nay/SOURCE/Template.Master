@@ -1,0 +1,377 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Template.master.cs" Inherits="SOURCE.Template"  %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- for-mobile-apps -->
+    <link href="css.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Grocery Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		    function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+    <!-- //font-awesome icons -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+<!-- start-smoth-scrolling -->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <!-- header -->
+	<div class="agileits_header">
+		<div class="w3l_offers" >
+			<asp:HyperLink runat="server" NavigateUrl="index.aspx"><i class="fa fa-home" aria-hidden="true"></i>_Home</asp:HyperLink>
+		</div>
+		<div class="w3l_search" style="margin-left:10em">
+
+				<asp:TextBox ID="tbsearch" runat="server" type="text" name="Product" value="Search a product..." onfocus="this.value = '';" onblur="if (this.value == '') {this.value = 'Search a product...';}" required="" />
+				<asp:Button ID="btnSearch" runat="server" type="button" OnClick="btnSearch_Click" />
+
+		</div>
+		<div class="product_list_header">  
+			
+                    <a href="checkout.aspx" name="submit" class="w3l_header_right1" style="border:2px groove black;height:30px;width:140px;line-height:25px;margin-top:10px;padding-left:15px;background:repeat;color:white" >View your cart</a>
+
+		</div>
+		<div class="w3l_header_right">
+			<ul>
+				<li class="dropdown profile_details_drop">
+                     <asp:HyperLink ID="DDICON" runat="server" NavigateUrl="#" class="dropdown-toggle" data-toggle="dropdown"><i id="icon" class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></asp:HyperLink>
+					 <asp:HyperLink Visible ="false" ID="DDINFO" runat="server" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><asp:Label ID="lbTEN" runat="server"></asp:Label><span class="caret"></span></asp:HyperLink>
+					<div class="mega-dropdown-menu">
+						<div class="w3ls_vegetables">
+                              <ul class="dropdown-menu drp-mnu">
+                                <li><asp:HyperLink ID="hlLogin" runat="server" NavigateUrl="login.aspx?ID=0">Đăng nhập</asp:HyperLink></li>
+                                  <li><asp:HyperLink ID="hlSignin" runat="server" NavigateUrl="login.aspx?ID=1">Đăng ký</asp:HyperLink></li>
+                                  <li><asp:HyperLink Visible="false" ID="hl_update_info" runat="server" NavigateUrl="~/Sua_info_KH.aspx">Sửa thông tin cá nhân</asp:HyperLink></li>
+                                  <li><asp:HyperLink Visible="false" ID="hlDoiMk" runat="server" NavigateUrl="DoiMatKhau.aspx">Đổi Mật Khẩu</asp:HyperLink></li>
+                                   <li><asp:HyperLink Visible="false" ID="hlAdmin" runat="server" NavigateUrl="~/Admin.aspx">Quản trị</asp:HyperLink></li>
+                                <li><asp:HyperLink Visible="false" ID="hlLogout" runat="server" NavigateUrl="Logout.aspx">Đăng xuất</asp:HyperLink></li>
+                            </ul>
+							
+						</div>                  
+					</div>	
+				</li>
+			</ul>
+		</div>
+		<div class="w3l_header_right1">
+			<h2><asp:HyperLink runat="server" NavigateUrl="mail.aspx">Contact Us</asp:HyperLink></h2>
+		</div>
+		<div class="clearfix"> </div>
+	</div>
+<!-- script-for sticky-nav -->
+	<script>
+	    $(document).ready(function () {
+	        var navoffeset = $(".agileits_header").offset().top;
+	        $(window).scroll(function () {
+	            var scrollpos = $(window).scrollTop();
+	            if (scrollpos >= navoffeset) {
+	                $(".agileits_header").addClass("fixed");
+	            } else {
+	                $(".agileits_header").removeClass("fixed");
+	            }
+	        });
+
+	    });
+	</script>
+<!-- //script-for sticky-nav -->
+	<div class="logo_products">
+		<div class="container">
+			<div class="w3ls_logo_products_left">
+				<h1><asp:HyperLink runat="server" NavigateUrl="index.aspx"><span>Grocery</span> Store</asp:HyperLink></h1>
+			</div>
+			<div class="w3ls_logo_products_left1">
+				<ul class="special_items">
+					<li><asp:HyperLink runat="server" NavigateUrl="events.aspx">Events</asp:HyperLink><i>/</i></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="aboutt.aspx">About Us</asp:HyperLink><i>/</i></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="products.aspx">Best Deals</asp:HyperLink><i>/</i></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="services.aspx">Services</asp:HyperLink></li>
+				</ul>
+			</div>
+			<div class="w3ls_logo_products_left1">
+				<ul class="phone_email">
+					<li><i class="fa fa-phone" aria-hidden="true"></i>(+0123) 234 567</li>
+					<li><i class="fa fa-envelope-o" aria-hidden="true"></i><asp:HyperLink runat="server" NavigateUrl="mailto:store@grocery.com">store@grocery.com</asp:HyperLink></li>
+				</ul>
+			</div>
+			<div class="clearfix"> </div>
+		</div>
+	</div>
+<!-- //header -->
+        
+        <!-- BEGIN Left Mid-->
+         <!-- products-breadcrumb -->
+	    <div class="products-breadcrumb">
+		    <div class="container">
+			    <%--<ul>
+				    <li><i class="fa fa-home" aria-hidden="true"></i><a href="index.aspx">Home</a><asp:Label runat="server">|</asp:Label></li>
+				    <li></li>
+			    </ul>--%>
+		    </div>
+	    </div>
+        <!-- //products-breadcrumb -->
+
+
+
+        <div class="banner">
+        		<div class="w3l_banner_nav_left">
+			<nav class="navbar nav_bottom">
+			 <!-- Brand and toggle get grouped for better mobile display -->
+			  <div class="navbar-header nav_2">
+				  <button type="button" class="navbar-toggle collapsed navbar-toggle1" data-toggle="collapse" data-target="#bs-megadropdown-tabs">
+					<asp:Label runat="server" class="sr-only">Toggle navigation</asp:Label>
+					<asp:Label runat="server" class="icon-bar"></asp:Label>
+					<asp:Label runat="server" class="icon-bar"></asp:Label>
+					<asp:Label runat="server" class="icon-bar"></asp:Label>
+				  </button>
+			   </div> 
+			   <!-- Collect the nav links, forms, and other content for toggling -->
+				<div class="collapse navbar-collapse" id="bs-megadropdown-tabs">
+					<ul class="nav navbar-nav nav_1">
+						<li><a href="productbrand.aspx">Mua nhiều nhất</a></li>
+                        <li><a href="allProducts.aspx">All product</a></li>
+                        <asp:Repeater ID="rp_catalogy" runat="server">
+						   <ItemTemplate>  
+                                    <li><a href="products.aspx?catalogy=<%# Eval("Maloaisp") %>"> <%# Eval("Tenloaisp") %></a></li>
+                            </ItemTemplate>   
+                        </asp:Repeater>
+
+
+						
+                        
+					</ul>
+				 </div><!-- /.navbar-collapse -->
+			</nav>
+		</div>
+    
+</div>
+        <asp:ContentPlaceHolder ID="NoiDung" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+   
+        <!-- footer -->
+	<div class="footer">
+		<div class="container">
+			<%--<div class="col-md-3 w3_footer_grid">
+				<h3>information</h3>
+				<ul class="w3_footer_grid_list">
+					<li><asp:HyperLink runat="server" NavigateUrl="events.aspx">Events</asp:HyperLink></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="aboutt.aspx">About Us</asp:HyperLink></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="products.aspx">Best Deals</asp:HyperLink></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="services.aspx">Services</asp:HyperLink></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="short-codes.aspx">Short Codes</asp:HyperLink></li>
+				</ul>
+			</div>
+			<div class="col-md-3 w3_footer_grid">
+				<h3>policy info</h3>
+				<ul class="w3_footer_grid_list">
+					<li><asp:HyperLink runat="server" NavigateUrl="faqs.aspx">FAQ</asp:HyperLink></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="privacy.aspx">privacy policy</asp:HyperLink></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="privacy.aspx">terms of use</asp:HyperLink></li>
+				</ul>
+			</div>
+			<div class="col-md-3 w3_footer_grid">
+				<h3>what in stores</h3>
+				<ul class="w3_footer_grid_list">
+					<li><asp:HyperLink runat="server" NavigateUrl="pet.aspx">Pet Food</asp:HyperLink></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="frozen.aspx">Frozen Snacks</asp:HyperLink></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="kitchen.aspx">Kitchen</asp:HyperLink></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="products.aspx">Branded Foods</asp:HyperLink></li>
+					<li><asp:HyperLink runat="server" NavigateUrl="household.aspx">Households</asp:HyperLink></li>
+				</ul>
+			</div>
+			<div class="col-md-3 w3_footer_grid">
+				<h3>twitter posts</h3>
+				<ul class="w3_footer_grid_list1">
+					<li><label class="fa fa-twitter" aria-hidden="true"></label><i>01 day ago</i><span>Non numquam <asp:HyperLink runat="server" NavigateUrl="#">http://sd.ds/13jklf#</asp:HyperLink>
+						eius modi tempora incidunt ut labore et
+						<asp:HyperLink runat="server" NavigateUrl="#">http://sd.ds/1389kjklf#</asp:HyperLink>quo nulla.</span></li>
+					<li><label class="fa fa-twitter" aria-hidden="true"></label><i>02 day ago</i><span>Con numquam <asp:HyperLink runat="server" NavigateUrl="#">http://fd.uf/56hfg#</asp:HyperLink>
+						eius modi tempora incidunt ut labore et
+						<asp:HyperLink runat="server" NavigateUrl="#">http://fd.uf/56hfg#</asp:HyperLink>quo nulla.</span></li>
+				</ul>
+			</div>--%>
+			<div class="clearfix"> </div>
+			<div class="agile_footer_grids" style="padding-top:0">
+				<div class="col-md-3 w3_footer_grid agile_footer_grids_w3_footer">
+					<div class="w3_footer_grid_bottom">
+						<h4>100% secure payments</h4>
+						<img src="images/card.png" alt=" " class="img-responsive" />
+					</div>
+				</div>
+				<div class="col-md-3 w3_footer_grid agile_footer_grids_w3_footer">
+					<div class="w3_footer_grid_bottom">
+						<h5>connect with us</h5>
+						<ul class="agileits_social_icons">
+							<li><asp:HyperLink runat="server" NavigateUrl="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></asp:HyperLink></li>
+							<li><asp:HyperLink runat="server" NavigateUrl="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></asp:HyperLink></li>
+							<li><asp:HyperLink runat="server" NavigateUrl="#" class="google"><i class="fa fa-google-plus" aria-hidden="true"></i></asp:HyperLink></li>
+							<li><asp:HyperLink runat="server" NavigateUrl="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></asp:HyperLink></li>
+							<li><asp:HyperLink runat="server" NavigateUrl="#" class="dribbble"><i class="fa fa-dribbble" aria-hidden="true"></i></asp:HyperLink></li>
+						</ul>
+					</div>
+				</div>
+				<div class="clearfix"> </div>
+			</div>
+			<div class="wthree_footer_copy">
+				<p>© 2016 Grocery Store. All rights reserved | Design by <asp:HyperLink runat="server" NavigateUrl="http://w3layouts.com/">Vũ Quốc Thiên</asp:HyperLink></p>
+			</div>
+		</div>
+	</div>
+<!-- //footer -->
+
+        <!-- js -->
+<script src="js/jquery-1.11.1.min.js"></script>
+							 <!--quantity-->
+									<script>
+									    $('.value-plus').on('click', function () {
+									        var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) + 1;
+									        divUpd.text(newVal);
+									    });
+
+									    $('.value-minus').on('click', function () {
+									        var divUpd = $(this).parent().find('.value'), newVal = parseInt(divUpd.text(), 10) - 1;
+									        if (newVal >= 1) divUpd.text(newVal);
+									    });
+									</script>
+								<!--quantity-->
+							<script>$(document).ready(function (c) {
+    $('.close1').on('click', function (c) {
+        $('.rem1').fadeOut('slow', function (c) {
+            $('.rem1').remove();
+        });
+    });
+});
+						   </script>
+							<script>$(document).ready(function (c) {
+    $('.close2').on('click', function (c) {
+        $('.rem2').fadeOut('slow', function (c) {
+            $('.rem2').remove();
+        });
+    });
+});
+						   </script>
+						  	<script>$(document).ready(function (c) {
+    $('.close3').on('click', function (c) {
+        $('.rem3').fadeOut('slow', function (c) {
+            $('.rem3').remove();
+        });
+    });
+});
+						   </script>
+
+<!-- //js -->
+<!-- script-for sticky-nav -->
+	<script>
+	    $(document).ready(function () {
+	        var navoffeset = $(".agileits_header").offset().top;
+	        $(window).scroll(function () {
+	            var scrollpos = $(window).scrollTop();
+	            if (scrollpos >= navoffeset) {
+	                $(".agileits_header").addClass("fixed");
+	            } else {
+	                $(".agileits_header").removeClass("fixed");
+	            }
+	        });
+
+	    });
+	</script>
+<!-- //script-for sticky-nav -->
+<!-- start-smoth-scrolling -->
+<script type="text/javascript" src="js/move-top.js"></script>
+<script type="text/javascript" src="js/easing.js"></script>
+<script type="text/javascript">
+    jQuery(document).ready(function ($) {
+        $(".scroll").click(function (event) {
+            event.preventDefault();
+            $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+        });
+    });
+</script>
+<!-- start-smoth-scrolling -->
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".dropdown").hover(
+            function () {
+                $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                $(this).toggleClass('open');
+            },
+            function () {
+                $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                $(this).toggleClass('open');
+            }
+        );
+    });
+</script>
+<!-- here stars scrolling icon -->
+	<script type="text/javascript">
+	    $(document).ready(function () {
+	        /*
+				var defaults = {
+				containerID: 'toTop', // fading element id
+				containerHoverID: 'toTopHover', // fading element hover id
+				scrollSpeed: 1200,
+				easingType: 'linear' 
+				};
+			*/
+
+	        $().UItoTop({ easingType: 'easeOutQuart' });
+
+	    });
+	</script>
+<!-- //here ends scrolling icon -->
+<script src="js/minicart.js"></script>
+<script>
+    paypal.minicart.render();
+
+    paypal.minicart.cart.on('checkout', function (evt) {
+        var items = this.items(),
+            len = items.length,
+            total = 0,
+            i;
+
+        // Count the number of each item in the cart
+        for (i = 0; i < len; i++) {
+            total += items[i].get('quantity');
+        }
+
+        if (total < 3) {
+            alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+            evt.preventDefault();
+        }
+    });
+
+	</script>
+    </div>
+    </form>
+</body>
+</html>

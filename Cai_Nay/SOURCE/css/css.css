@@ -1,0 +1,66 @@
+﻿body {
+
+.address span {
+	font-size: 14px;
+	color: #666;
+	display: block;
+	padding-bottom: 4px;
+	font-family: 'Lato', sans-serif;
+}
+
+.address input[type="text"]  {
+	border: 1px solid #242424;
+	outline: none;
+	width: 100%;
+	font-size: 14px;
+	padding: 10px 10px;
+	font-family: 'Lato', sans-serif;
+}
+.address input[type="date"]  {
+	border: 1px solid #242424;
+	outline: none;
+	width: 100%;
+	font-size: 14px;
+	padding: 10px 10px;
+	font-family: 'Lato', sans-serif;
+}
+.address input[type="password"]  {
+	border: 1px solid #242424;
+	outline: none;
+	width: 100%;
+	font-size: 14px;
+	padding: 10px 10px;
+	font-family: 'Lato', sans-serif;
+}
+.address{
+	margin-top:4%;
+}
+.address a {
+	font-size: 14px;
+	color: #666;
+	font-weight: 500;
+	font-family: 'Lato', sans-serif;
+}
+.address input[type="submit"] {
+	background: #97262a;
+	color: #FFF;
+	font-size: 1em;
+	padding: 0.5em 1.2em;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+	display: inline-block;
+	text-transform: uppercase;
+	border: none;
+	outline: none;
+	margin-left: 10px;
+}
+.address input[type="submit"]:hover {
+	background:#242424;
+	transition: 0.5s all;
+	-webkit-transition: 0.5s all;
+	-moz-transition: 0.5s all;
+	-o-transition: 0.5s all;
+}
+}

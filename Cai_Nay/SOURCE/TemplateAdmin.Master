@@ -1,0 +1,124 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="TemplateAdmin.master.cs" Inherits="SOURCE.TemplateAdmin" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <!-- for-mobile-apps -->
+    <link href="css.css" rel="stylesheet" type="text/css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="keywords" content="Grocery Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
+    Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
+		    function hideURLbar(){ window.scrollTo(0,1); } </script>
+    <!-- //for-mobile-apps -->
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
+    <link href="css/style.css" rel="stylesheet" type="text/css" media="all" />
+    <!-- font-awesome icons -->
+    <link href="css/font-awesome.css" rel="stylesheet" type="text/css" media="all" /> 
+    <!-- //font-awesome icons -->
+    <!-- js -->
+    <script src="js/jquery-1.11.1.min.js"></script>
+    <!-- //js -->
+    <link href='//fonts.googleapis.com/css?family=Ubuntu:400,300,300italic,400italic,500,500italic,700,700italic' rel='stylesheet' type='text/css'>
+    <link href='//fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,400italic,600,600italic,700,700italic,800,800italic' rel='stylesheet' type='text/css'>
+    <!-- start-smoth-scrolling -->
+    <script type="text/javascript" src="js/move-top.js"></script>
+    <script type="text/javascript" src="js/easing.js"></script>
+    <script type="text/javascript">
+        jQuery(document).ready(function ($) {
+            $(".scroll").click(function (event) {
+                event.preventDefault();
+                $('html,body').animate({ scrollTop: $(this.hash).offset().top }, 1000);
+            });
+        });
+    </script>
+<!-- start-smoth-scrolling -->
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+        <div class="agileits_header">
+
+	    <div class="w3l_offers" >
+			<asp:HyperLink runat="server" NavigateUrl="index.aspx"><i class="fa fa-home" aria-hidden="true"></i>_Home</asp:HyperLink>
+		</div>
+         
+            	
+		<div class="w3l_header_right" style="float:right;margin-right:50px;margin-bottom:10px">
+			<ul>
+				<li class="dropdown profile_details_drop">
+                     <asp:HyperLink ID="DDICON" runat="server" NavigateUrl="#" class="dropdown-toggle" data-toggle="dropdown"><i id="icon" class="fa fa-user" aria-hidden="true"></i><span class="caret"></span></asp:HyperLink>
+					 <asp:HyperLink Visible ="false" ID="DDINFO" runat="server" href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false"><asp:Label ID="lbTEN" runat="server"></asp:Label><span class="caret"></span></asp:HyperLink>
+					<div class="mega-dropdown-menu">
+						<div class="w3ls_vegetables">
+                              <ul class="dropdown-menu drp-mnu">
+                                   <li><asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Admin.aspx">Quản trị</asp:HyperLink></li>
+<%--                                <li><asp:HyperLink ID="hlDoiMk" runat="server" NavigateUrl="DoiMatKhau.aspx">Đổi Mật Khẩu</asp:HyperLink></li>--%>
+                                <li><asp:HyperLink ID="hlLogout" runat="server" NavigateUrl="Logout.aspx">Đăng xuất</asp:HyperLink></li>
+                            </ul>
+							
+						</div>                  
+					</div>	
+				</li>
+			</ul>
+		</div>
+		<div class="clearfix"> </div>
+	    </div>
+	    
+
+        <div class="products-breadcrumb">
+		    <div class="container">
+			   <div>
+                   <h3>
+                        TRANG DÀNH CHO QUẢN TRỊ VIÊN
+                   </h3>
+			   </div>
+		    </div>
+	    </div>
+
+        <div class="wthree_footer_copy">
+			
+	    </div>
+
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+        <div class="clearfix"> </div>
+       <div class="wthree_footer_copy">
+           <div style="background:#333;height:100px;margin-bottom:5px;padding-top:35px">
+               	<p style="font-size:20px">© 2016 Grocery Store. All rights reserved | Design by <asp:HyperLink runat="server" NavigateUrl="http://w3layouts.com/">Vũ Quốc Thiên</asp:HyperLink></p>
+           </div>
+			
+	    </div>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="js/bootstrap.min.js"></script>
+<script>
+    $(document).ready(function () {
+        $(".dropdown").hover(
+            function () {
+                $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                $(this).toggleClass('open');
+            },
+            function () {
+                $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                $(this).toggleClass('open');
+            }
+        );
+    });
+</script>
+<!-- here stars scrolling icon -->
+
+
+    </div>
+    </form>
+</body>
+</html>
